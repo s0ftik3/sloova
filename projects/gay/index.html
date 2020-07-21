@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <title>Sloova</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+
+  <body class="text-center">
+  <div class="hello">
+      <h1>Gayness</h1>
+      <!-- <div id="response"></div> -->
+      <button id="result" class="btn btn-primary btn-block" style="color: white;">Check</button>
+      <a type="button" href="http://sloova.xyz/" class="btn btn-primary btn-block" style="color: white;" onclick="newFunction()">Back</a>
+      <p></p>
+      <div id="response"></div>
+  </div>
+  </body>
+
+  <script>
+    $("#result").click(function(){
+      $("#response").animate({
+          height: '+=72px'
+      }, 300);
+
+      var percentage = Math.floor(Math.random() * 100);
+      var textResult = `Congrats! You are ${percentage}% gay.`;
+    
+      $('<div class="alert alert-success">' + textResult +
+      '</div>').hide().appendTo('#response').fadeIn(1000);
+    
+      $(".alert").delay(3000).fadeOut(
+        "normal",
+        function(){
+        $(this).remove();
+      });
+
+      $("#response").delay(4000).animate({
+          height: '-=72px'
+      }, 300);
+
+      });
+  </script>
+
+</html>
