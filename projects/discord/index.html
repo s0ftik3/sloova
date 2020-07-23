@@ -10,16 +10,38 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <script type="text/javascript" src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body class="text-center">
   <div class="hello">
-      <h1>Clicker</h1>
       <div class="new">
-        <p id="count">0</p>
+        <p id="userStatus">softik has offline status.</p>
       </div>
-      <button type="button" class="btn btn-primary btn-block" style="color: white;" onclick="clicker()">Click</button>
       <a type="button" href="http://sloova.xyz/" class="btn btn-primary btn-block" style="color: white;">Back</a>
   </div>
   </body>
+
+  <script>
+    var options = {
+      'url': 'https://discordapp.com/api/guilds/718067621412732959/widget.json',
+      'method': 'GET',
+      'headers': {
+      }
+    }
+    
+    $.ajax(options).done(function (response) {
+      // var obj = JSON.parse(response.body);
+      var me = response.members.find(u => u.username === 'softik');
+      var status = me.status;
+
+      var statusNames = {
+        'online': 'online',
+        'idle': 'idle',
+        'dnd': 'do not disturb'
+      }
+
+      document.getElementById("userStatus").firstChild.data = 'softik has ' + statusNames[status] + ' status.';
+    });
+    </script>
 </html>

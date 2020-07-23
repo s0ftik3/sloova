@@ -4,3 +4,4 @@ function clicker() {
     i++
     document.getElementById("count").firstChild.data = i;
 }
+
