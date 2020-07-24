@@ -42,7 +42,7 @@ p {
   }
 
 /* Center the loader */
-#loader {
+/* #loader {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -57,9 +57,9 @@ p {
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
-}
+} */
 
-@-webkit-keyframes spin {
+/* @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
 }
@@ -67,7 +67,7 @@ p {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
+} */
 
 /* Add animation to "page content" */
 .animate-bottom {
