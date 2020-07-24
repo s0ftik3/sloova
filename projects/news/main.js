@@ -1,3 +1,14 @@
+var myVar;
+
+function loader() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("testLoad").style.display = "block";
+}
+
 var request = new XMLHttpRequest();
 request.open('GET', 'https://covid19-us-api.herokuapp.com/news', true);
 
