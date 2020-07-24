@@ -13,18 +13,22 @@
   </head>
   <body class="text-center">
   <div class="hello">
-      <h1>Convert C° to F°</h1>
-      <p class="mt-2 mb-3 text-muted">All numbers are rounded.</p>
+      <h1>Generator</h1>
+      <p class="mt-2 mb-3 text-muted">Generates random number from to.</p>
       <div class="form">
           <p></p>
-          <input type="text" class="form-control" id="celcius" placeholder="Celcius" onkeyup="celciusToFahrenheit()" onclick="resetF()" onfocus="this.value=''">
+          <input type="text" class="form-control" id="fvalue" placeholder="Min value">
       </div>
-
       <div class="form">
         <p></p>
-          <input type="text" class="form-control" id="fahrenheit" placeholder="Fahrenheit" onkeyup="fahrenheitToCelcius()" onclick="resetC()" onfocus="this.value=''">
+          <input type="text" class="form-control" id="svalue" placeholder="Max value">
+      </div>
+      <div class="form">
+        <p></p>
+          <input type="text" class="form-control" id="result" placeholder="Result" disabled>
       </div>
       <p></p>
+      <button type="button" class="btn btn-primary btn-block" style="color: white;" onclick="generate()">Generate</button>
       <a type="button" href="http://sloova.xyz/" class="btn btn-primary btn-block" style="color: white;">Back</a>
   </div>
   </body>

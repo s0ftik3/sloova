@@ -5,57 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Hello. This is softik's website with some projects on JavaScript language.">
     <meta name="author" content="softik">
-    <link rel="icon" href="/assets/img/logobg.ico">
+    <link rel="icon" href="/assets/img/favicon.ico">
     <title>Sloova</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </head>
-
   <body class="text-center">
   <div class="hello">
       <h1>Translate RU to KZ</h1>
       <div class="form">
           <p></p>
-          <!-- <input type="text" class="form-control" id="ru" placeholder="Russian" onkeyup="myFunction()"> -->
-          <textarea type="text" class="form-control" id="ru" placeholder="Russian" onkeyup="myFunction()"></textarea>
+          <textarea type="text" class="form-control" id="ru" placeholder="Russian" onkeyup="translator()"></textarea>
       </div>
-
       <div class="form">
         <p></p>
-          <!-- <input type="text" class="form-control" id="kz" placeholder="Kazakh" onkeyup=""> -->
-          <textarea type="text" class="form-control" id="kz" placeholder="Kazakh" onkeyup=""></textarea>
+          <textarea type="text" class="form-control" id="kz" placeholder="Kazakh" onkeyup="" disabled></textarea>
       </div>
       <p></p>
       <a type="button" href="http://sloova.xyz/" class="btn btn-primary btn-block" style="color: white;">Back</a>
   </div>
   </body>
-    
-  <script>
-    document.getElementById("kz").disabled = true;
-
-    function myFunction() {
-      var text = document.getElementById('ru').value;
-      var settings = {
-	    "async": true,
-	    "crossDomain": true,
-	    "url": "https://microsoft-translator-text.p.rapidapi.com/translate?from=ru&profanityAction=NoAction&textType=plain&to=kk&api-version=3.0",
-	    "method": "POST",
-	    "headers": {
-		    "x-rapidapi-host": "microsoft-translator-text.p.rapidapi.com",
-		    "x-rapidapi-key": "6be04e24f1msh1ee716a99325910p141bf3jsnb58086d35a6f",
-		    "content-type": "application/json",
-		    "accept": "application/json"
-	    },
-	    "processData": false,
-	    "data": `[ {  \"Text\": \"${text}\" }]`
-      }
-
-    $.ajax(settings).done(function (response) {
-      var result = response['0'].translations[0].text;
-      document.getElementById('kz').value = result;
-    });
-
-  }
-  </script>
 </html>

@@ -1,5 +1,4 @@
 var i = 5;
-
 function takeSweet() {
     do {
         i--

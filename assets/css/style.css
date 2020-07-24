@@ -30,6 +30,16 @@ body {
   margin: 0 auto;
 }
 
+.circle {
+  width: 30px; 
+  height: 30px; 
+  background: #747f8d; 
+  border-radius: 50px; 
+  position: relative; 
+  top: 145px; 
+  left: 195px;
+}
+
 /* .hello {
   height: 65%;
   position: relative;
