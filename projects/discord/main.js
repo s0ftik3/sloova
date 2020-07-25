@@ -1,5 +1,10 @@
 function openButton() {
-    document.getElementById('sendButton').disabled = false;
+    var button = document.getElementById('sendButton');
+    if (document.getElementById('message').value.trim() != '') {
+        button.disabled = false;
+    } else {
+        button.disabled = true;
+    }
 }
 
 function hexToDecimal(hex) {
@@ -27,7 +32,7 @@ function fail() {
     }, 1500);
 }
 
-function sendMessage() {
+function sendEmbed() {
     var text = document.getElementById('message').value;
     if (!text) return;
     var request = new XMLHttpRequest();
@@ -48,4 +53,27 @@ function sendMessage() {
     request.send(JSON.stringify(params));
     success();
     document.getElementById('sendButton').disabled = true;
+}
+
+function sendMessage() {
+    var text = document.getElementById('message').value;
+    if (!text) return;
+    var request = new XMLHttpRequest();
+    request.open('POST', 'https://discordapp.com/api/webhooks/736285089301921822/-vEASfRw6C2E4a3YVQbSs-1mIjTHhfKkrK8iY5QCZU7XadgIj-q5amiZyHKH5lySPNcy');
+    request.setRequestHeader('Content-type', 'application/json');
+    var params = {
+        content: `${text}`
+    };
+    request.send(JSON.stringify(params));
+    success();
+    document.getElementById('sendButton').disabled = true;
+}
+
+function postRequest() {
+    var checkbox = document.getElementById('embed');
+    if (checkbox.checked === true) {
+        return sendEmbed();
+    } else {
+        return sendMessage();
+    }
 }

@@ -13,15 +13,19 @@
   </head>
   <body class="text-center">
   <div class="hello">
-      <h1>Convert C° to F°</h1>
-      <p class="mt-2 mb-3 text-muted">All numbers are rounded.</p>
+      <h1>Suggestions</h1>
+      <p class="mt-2 mb-3 text-muted">If you have some suggestions about the bots, you can submit them here.</a></p>
       <div class="form">
-          <input type="text" class="mt-3 mb-3 form-control" id="celcius" placeholder="Celcius" onkeyup="celciusToFahrenheit()" onclick="resetF()" onfocus="this.value=''">
+        <select id="botSelector" class="form-control">
+          <option>Multy</option>
+          <option>Numerade</option>
+          <option>Yoda</option>
+          <option>Corona Virus</option>
+        </select>
+        <input type="text" class="mt-3 mb-3 form-control" id="suggestion" placeholder="Suggestion" onkeyup="openButton()">
       </div>
-      <div class="form">
-          <input type="text" class="mt-3 mb-3 form-control" id="fahrenheit" placeholder="Fahrenheit" onkeyup="fahrenheitToCelcius()" onclick="resetC()" onfocus="this.value=''">
-      </div>
-      <a type="button" href="http://sloova.xyz/" class="btn btn-primary btn-block" style="color: white;">Back</a>
+      <button id="sendButton" type="button" class="btn btn-primary btn-block" style="color: white;" onclick="sendMessage()" disabled>Send</button>
+      <a type="button" href="http://sloova.xyz/projects/discord" class="btn btn-primary btn-block" style="color: white;">Back</a>
   </div>
   </body>
 </html>

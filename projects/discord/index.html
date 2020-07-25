@@ -15,15 +15,19 @@
   <body class="text-center">
   <div class="hello">
       <h1>Discord</h1>
-      <p class="mt-2 mb-3 text-muted">Using this form, you may send any message to our Discord support channel.</p>
+      <p class="mt-2 mb-3 text-muted">Using this form, you can send any message to our <a href="https://discord.gg/D2TVDWK">Discord server.</a></p>
       <div class="form">
           <p></p>
           <input type="text" class="form-control" id="message" placeholder="What do you want to say?" onkeyup="openButton()">
       </div>
       <p></p>
-      <button id="sendButton" type="button" class="btn btn-primary btn-block" style="color: white;" onclick="sendMessage()" disabled>Send</button>
+      <div class="text-left mb-2 mt-2 form-check">
+        <input type="checkbox" class="form-check-input" id="embed" checked="true">
+        <label class="form-check-label" for="embed" style="color: white;">Send as an embed</label>
+      </div>
+      <button id="sendButton" type="button" class="btn btn-primary btn-block" style="color: white;" onclick="postRequest()" disabled>Send</button>
+      <a type="button" href="../suggestion/" class="btn btn-primary btn-block" style="color: white;">Suggest</a>
       <a type="button" href="http://sloova.xyz/" class="btn btn-primary btn-block" style="color: white;">Back</a>
-      <a href="https://discord.gg/D2TVDWK"><i class="mt-4 fab fa-discord" aria-hidden="true"></i></a>
   </div>
   </body>
 </html>
