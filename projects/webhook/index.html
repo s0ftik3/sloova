@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hello. This is softik's website with some projects on JavaScript language.">
+    <meta name="author" content="softik">
+    <link rel="icon" href="/assets/img/favicon.ico">
+    <title>Sloova</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body id="closed" class="text-center" onload="removeAll()">
+  <div class="hello">
+      <h1>Embed</h1>
+      <p class="mt-2 mb-3 text-muted">This form allows you to send embed messages to your Discord server.</a></p>
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputWebhook" placeholder="Webhook url" onkeyup="openButton()">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputTitle" placeholder="Title" onkeyup="openButton()">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputDescription" placeholder="Description" onkeyup="openButton()">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputColor" placeholder="Color (HEX code)" onkeyup="openButton()">
+        </div>
+        <div class="text-left mb-2 mt-2 form-check">
+          <input type="checkbox" class="form-check-input" id="timestamp" >
+          <label class="form-check-label" for="embed" style="color: white;">Set timestamp</label>
+        </div>
+      </form>
+      <button id="sendButton" type="button" class="btn btn-primary btn-block" style="color: white;" onclick="postRequest()" disabled>Send</button>
+      <a type="button" href="http://sloova.xyz/projects/discord" class="btn btn-primary btn-block" style="color: white;">Back</a>
+  </div>
+  </body>
+</html>
