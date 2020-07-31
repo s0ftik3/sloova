@@ -31,7 +31,9 @@ fetch('https://discordapp.com/api/guilds/718067621412732959/widget.json')
 .then((data) => {
   var me = data.members.find(u => u.username === 'softik');
   var status = me.status;
-  statusNow(status);
+  setTimeout(() => {
+    statusNow(status);
+  }, 500);
 });
 
 function loadScreen() {

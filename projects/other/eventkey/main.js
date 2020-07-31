@@ -12,10 +12,13 @@ const keyCodes = {
 
 function displayPressed(key) {
     var field = document.getElementById('keyPressed');
+    var numField = document.getElementById('keyNum');
     if (keyCodes[key.keyCode] == undefined) {
         field.placeholder = 'The key was not determined.';
+        numField.placeholder = 'The key number was not determined.';
     } else {
         field.placeholder = keyCodes[key.keyCode];
+        numField.placeholder = key.keyCode;
     }
 };
 
