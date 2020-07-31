@@ -42,9 +42,9 @@ function loadScreen() {
     <div id="discordState" class="circle"></div>
     <img class="mb-4" src="/assets/img/logobg.svg" alt="" width="150" height="150">
     </div>
-    <a type="button" href="/projects/useful/" class="btn btn-primary btn-block" style="color: white;">Useful <span class="badge badge-danger">New</span></a>
+    <a type="button" href="/projects/useful/" class="btn btn-primary btn-block" style="color: white;">Useful</a>
     <a type="button" href="/projects/discord/" class="btn btn-primary btn-block" style="color: white;">Discord</a>
-    <a type="button" href="/projects/other/" class="btn btn-primary btn-block" style="color: white;">Other</a>
+    <a type="button" href="/projects/other/" class="btn btn-primary btn-block" style="color: white;">Other <span class="badge badge-danger">New</span></a>
     <p class="mt-4 mb-2 text-muted">sloova.xyz <a href="/projects/other/login/" style="text-decoration: none; color: #6c757d;">&copy;</a> <strong>2020</strong></p>
     <a href="/assets/somewhere/"><i class="mr-2 fab fa-github" aria-hidden="true"></i></a>
     <a href="https://discord.gg/D2TVDWK"><i class="mr-2 fab fa-discord" aria-hidden="true"></i></a>
